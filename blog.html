@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - takenote</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Coming Soon Page Specific Styles */
+        .coming-soon-container {
+            background-color: #FFF8DC;
+            min-height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .coming-soon-content {
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .coming-soon-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .coming-soon-subtitle {
+            font-size: 1.5rem;
+            color: #666666;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+        
+        .coming-soon-description {
+            font-size: 1.1rem;
+            color: #888888;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+        
+        .animated-dots {
+            display: inline-block;
+            animation: dots 1.5s infinite;
+        }
+        
+        .floating-icon {
+            font-size: 4rem;
+            color: #4A90E2;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+        
+        @keyframes dots {
+            0%, 20% {
+                color: transparent;
+                text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+            }
+            40% {
+                color: #666666;
+                text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+            }
+            60% {
+                text-shadow: 0.25em 0 0 #666666, 0.5em 0 0 transparent;
+            }
+            80%, 100% {
+                text-shadow: 0.25em 0 0 #666666, 0.5em 0 0 #666666;
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-title {
+                font-size: 2.5rem;
+            }
+            .coming-soon-subtitle {
+                font-size: 1.2rem;
+            }
+            .floating-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <button id="sidebar-toggle" class="sidebar-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="images/takenote-logo.png" alt="takenote" class="logo-image">
+        </div>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="premium.html" class="nav-link">Premium</a>
+            <a href="mailto:donate@takenote.online" class="donate-btn">
+                <svg class="donate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                Donate
+            </a>
+        </nav>
+    </header>
+
+    <!-- Coming Soon Content -->
+    <div class="coming-soon-container">
+        <div class="coming-soon-content">
+            <div class="floating-icon">
+                <i class="fas fa-blog"></i>
+            </div>
+            <h1 class="coming-soon-title">Coming Soon</h1>
+            <p class="coming-soon-subtitle">Our Blog is on the way<span class="animated-dots">...</span></p>
+            <p class="coming-soon-description">
+                We're working hard to bring you insightful articles, tutorials, and tips about productivity, note-taking, and more. Stay tuned for exciting content that will help you make the most of your takenote experience.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
